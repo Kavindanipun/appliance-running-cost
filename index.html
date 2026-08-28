@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Appliance Electricity Cost Calculator — Cost Per Hour, Month & Year</title>
+<meta name="description" content="Calculate how much an appliance costs to run. Enter watts, usage time and your electricity rate to see cost per hour, day, month and year in USD or GBP.">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="How Much Does It Cost to Run an Appliance?">
+<meta property="og:description" content="Free electricity running-cost calculator for heaters, dryers, TVs, gaming PCs, air fryers and more.">
+<meta property="og:type" content="website"><link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Appliance Electricity Cost Calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate appliance electricity use and running cost from watts, usage time and electricity price."}</script>
+</head><body>
+<header><div class="nav"><a class="brand" href="./">RunCost<span>Check</span></a><nav><a href="#calculator">Calculator</a><a href="#guide">Guide</a><a href="#examples">Examples</a></nav></div></header>
+<main>
+<section class="hero"><div class="badge">FREE APPLIANCE RUNNING COST CALCULATOR</div><h1>How much does it cost to <span>run your appliance?</span></h1><p>Use your own wattage, usage and electricity rate. Get an instant estimate per hour, day, month and year.</p><div class="pills"><b>US & UK mode</b><b>No sign-up</b><b>Your own tariff</b></div></section>
+
+<section id="calculator" class="calculator">
+<div class="calcintro"><div><small>PERSONALIZED ESTIMATE</small><h2>Calculate your real running cost</h2></div><p>For the best estimate, use the wattage shown on your appliance label and the electricity unit rate from your latest bill.</p></div>
+<div class="country"><button class="countryBtn active" data-country="us">🇺🇸 United States</button><button class="countryBtn" data-country="uk">🇬🇧 United Kingdom</button></div>
+<div class="presets"><span>Quick appliance:</span><button data-w="1500">Space heater</button><button data-w="2000">Electric heater</button><button data-w="300">Gaming PC</button><button data-w="100">TV</button><button data-w="1500">Air fryer</button><button data-w="3000">Tumble dryer</button><button data-w="150">Fridge*</button></div>
+<form id="form"><div class="inputs">
+<label>Appliance wattage (W)<input id="watts" type="number" min="1" step="1" value="1500" required></label>
+<label>Hours used per day<input id="hours" type="number" min="0" max="24" step=".1" value="4" required></label>
+<label>Days used per month<input id="days" type="number" min="0" max="31" step="1" value="30" required></label>
+<label><span id="rateLabel">Electricity rate ($/kWh)</span><input id="rate" type="number" min="0" step=".001" value=".18" required></label>
+</div><button class="primary">Calculate running cost →</button></form>
+<div id="result" class="result" aria-live="polite" hidden></div>
+<p class="fine">*Fridges, thermostatic heaters and other cycling appliances do not draw their rated power continuously. For those devices, measured kWh from a smart plug or energy label can give a better estimate.</p>
+</section>
+
+<section class="value"><div><strong>Cost per hour</strong><span>See what one hour really costs.</span></div><div><strong>Monthly impact</strong><span>Turn everyday use into a bill estimate.</span></div><div><strong>What-if savings</strong><span>See the effect of using it one hour less.</span></div></section>
+
+<article id="guide">
+<div class="content"><div class="badge">ELECTRICITY COST GUIDE</div><h2>How to calculate how much an appliance costs to run</h2>
+<p class="lead">You only need three things: the appliance's power, how long you use it, and your electricity price per kilowatt-hour (kWh).</p>
+<h3>The basic formula</h3><div class="formula"><b>Watts ÷ 1,000 = kilowatts</b><b>Kilowatts × hours = kWh used</b><b>kWh × electricity rate = running cost</b></div>
+<p>For example, a 2,000W appliance is 2kW. If it draws that power for one hour, it uses 2kWh. Multiply that by your electricity unit rate to estimate the cost.</p>
+<h3>Where do I find the wattage?</h3><p>Check the rating label on the back, bottom or power adapter. Manuals and manufacturer specifications may also list watts. If a device shows volts and amps instead, its real consumption can still vary, so a plug-in energy meter is often better for devices whose power changes during use.</p>
+<h3>Use your own electricity rate</h3><p>Do not assume a generic national rate if you want a personal estimate. Look for the electricity unit rate on your bill. UK bills commonly express this in pence per kWh; US plans commonly show dollars or cents per kWh.</p>
+<div class="notice"><b>Why your actual bill can differ:</b> thermostats cycle, compressors turn on and off, PCs change power with workload, dryers use different programmes, and tariffs can vary by time of day. This tool estimates energy cost from the inputs you provide; it does not include fixed standing/service charges.</div>
+
+<h2 id="examples">Common appliance questions</h2>
+<div class="cards"><a href="#calculator" data-set="2000">How much does a heater cost to run?</a><a href="#calculator" data-set="3000">How much does a tumble dryer cost to run?</a><a href="#calculator" data-set="1500">How much does an air fryer cost to run?</a><a href="#calculator" data-set="300">How much electricity does a gaming PC use?</a><a href="#calculator" data-set="100">How much does a TV cost to run?</a><a href="#calculator" data-set="150">How much electricity does a fridge use?</a></div>
+
+<h2>How to lower appliance running costs</h2><p>The biggest levers are usually power draw, run time and electricity price. Cutting unnecessary run time directly reduces the estimate. For flexible loads, a time-of-use tariff may make off-peak operation cheaper, depending on your plan. When comparing appliances, energy consumption over a typical cycle or year is usually more useful than purchase price alone.</p>
+<h2>Important limitations</h2><p>This calculator is best for a device that draws roughly the entered wattage while operating. Appliances that cycle or vary power can use substantially less than “rated watts × total clock time.” If you know the appliance's measured kWh per cycle, day or year, use that consumption figure for a more accurate comparison.</p>
+</div></article>
+
+<section class="faq"><div class="badge">QUICK ANSWERS</div><h2>Frequently asked questions</h2>
+<details><summary>What does kWh mean?</summary><p>A kilowatt-hour is a unit of energy. A 1,000W device drawing that power for one hour uses 1kWh.</p></details>
+<details><summary>Does a 2,000W heater always use 2kWh every hour?</summary><p>Not necessarily. It would use 2kWh in an hour if it drew 2,000W continuously. A thermostat may switch the heating element on and off, reducing actual consumption.</p></details>
+<details><summary>Does this include standing charges or fixed utility fees?</summary><p>No. It estimates the incremental energy cost of the appliance from your per-kWh rate. Fixed charges are excluded.</p></details>
+<details><summary>Can I use this in the UK?</summary><p>Yes. Select United Kingdom and enter your electricity unit rate in pence per kWh. The calculator displays results in pounds.</p></details>
+</section>
+<section class="cta"><h2>Know the cost before the bill arrives.</h2><a href="#calculator">Calculate an appliance →</a></section>
+</main><footer><strong>RunCostCheck</strong><p>Free practical electricity-cost estimates. Educational estimates only; check your tariff and measured appliance use for billing decisions.</p><small>© <span id="year"></span></small></footer>
+<script src="app.js"></script></body></html>
